@@ -16,15 +16,16 @@ public class StudentsScoreCalculationTest extends Mockito implements StudentsSco
 
     private String[] subjectsArray = {"Java", "Scala", "Play", "Akka"};
     private double[] marks1 = {55, 75, 88, 62};
-    Student student = new Student(1, "Divya", subjectsArray, marks1);
+    private Student student = new Student(1, "Divya", subjectsArray, marks1);
+    private Student student1 = new Student();
 
     @Test
     public void isEligibleTest(){
         PowerMockito.mockStatic(Calculator.class);
         Mockito.when(Calculator.checkIfGreaterThan30(55)).thenReturn(true);
         Mockito.when(Calculator.checkIfGreaterThan30(75)).thenReturn(true);
-        Mockito.when(Calculator.checkIfGreaterThan30(85)).thenReturn(true);
-        Mockito.when(Calculator.checkIfGreaterThan30(65)).thenReturn(true);
+        Mockito.when(Calculator.checkIfGreaterThan30(88)).thenReturn(true);
+        Mockito.when(Calculator.checkIfGreaterThan30(62)).thenReturn(true);
 
         boolean result = StudentsScoreCalculation.isEligible(student);
         assertEquals(true, result);
@@ -33,14 +34,20 @@ public class StudentsScoreCalculationTest extends Mockito implements StudentsSco
     @Test
     public void calculatePercentageTest(){
         double result = StudentsScoreCalculation.calculatePercentage(student);
-        assert(70.0 == result);
+        assert(result == 70.0);
     }
 
 
     @Test
     public void calculatePercentageByReduceTest(){
         double result = StudentsScoreCalculation.calculatePercentageByReduce(student);
-        assert(70.0 == result);
+        assert(result == 70.0);
+    }
+
+    @Test
+    public void calculatePercentageByReduceTestForEmptyStudent(){
+        double result = StudentsScoreCalculation.calculatePercentageByReduce(student1);
+        assert(result == 0.0);
     }
 
     @Test
@@ -49,4 +56,9 @@ public class StudentsScoreCalculationTest extends Mockito implements StudentsSco
         assertEquals(4, result);
     }
 
+    @Test
+    public void averageMarksTest(){
+        double result = StudentsScoreCalculation.averageMarks(student);
+        assert(result == 70.0);
+    }
 }

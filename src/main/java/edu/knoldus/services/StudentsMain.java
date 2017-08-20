@@ -19,9 +19,6 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         Student student3 = new Student(1, "Shruti", subjects, marks3);
         Student student4 = new Student(1, "Prince", subjects, marks4);
 
-        //StudentsScoreCalculation studentsScoreCalculation = new StudentsScoreCalculation();
-        //StudentComparisons studentComparisons = new StudentComparisons();
-
         System.out.println(StudentsScoreCalculation.isEligible(student1));
         System.out.println(StudentsScoreCalculation.calculatePercentage(student1));
 
@@ -38,8 +35,13 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         System.out.println(".....................");
         StudentComparisons.passedStudents(studentsList).forEach(Student::displayName);
 
-
         System.out.println(StudentsScoreCalculation.calculatePercentageByReduce(student2));
+
+        DateAndTimeExample dateAndTimeExample = new DateAndTimeExample();
+        System.out.println(dateAndTimeExample.ageOfPerson());
+
+        System.out.println(StudentsScoreCalculation.averageMarks(student1));
+
     }
 }
 

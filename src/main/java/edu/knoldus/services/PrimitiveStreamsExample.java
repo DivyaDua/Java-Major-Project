@@ -2,17 +2,18 @@ package edu.knoldus.services;
 
 import org.apache.commons.lang3.ObjectUtils;
 
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class PrimitiveStreamsExample {
 
-    double average(IntStream intStream){
-        return intStream.average().orElse(0.0);
+    /*int average(IntStream intStream){
+        return intStream.collect(Collectors.counting());
     }
 
     IntStream generateStream(int a){
         return IntStream.empty();
-    }
+    }*/
 
 
 }

@@ -4,6 +4,7 @@ import edu.knoldus.models.Student;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public interface StudentComparisons extends StudentsScoreCalculation{
@@ -36,6 +37,16 @@ public interface StudentComparisons extends StudentsScoreCalculation{
 
     static Stream<Student> passedStudents(List<Student> studentsList){
         return studentsList.stream().filter(student -> StudentsScoreCalculation.calculatePercentage(student) > 30);
+    }
+
+    static Student firstStudent(List<Student> studentsList){
+        Optional<Student> student =  studentsList.stream().distinct().findFirst();
+        if(student.isPresent()){
+            return student.get();
+        }
+        else {
+            return new Student();
+        }
     }
 
 }

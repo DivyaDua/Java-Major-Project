@@ -6,6 +6,13 @@ public class Student {
     String[] subject;
     double[] marks;
 
+    public Student(){
+        this.rollNo = 0;
+        this.name = "";
+        this.subject = new String[0];
+        this.marks = new double[0];
+    }
+
     public Student(int rollNo, String name, String[] subject, double[] marks){
         this.rollNo = rollNo;
         this.name = name;

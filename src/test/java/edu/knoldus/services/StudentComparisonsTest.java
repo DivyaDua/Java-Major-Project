@@ -1,7 +1,6 @@
 package edu.knoldus.services;
 
 import static org.junit.Assert.*;
-import edu.knoldus.models.Calculator;
 import edu.knoldus.models.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,7 +8,6 @@ import org.mockito.Mockito;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -29,7 +27,8 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
     private Student student3 = new Student(1, "Shruti", subjects, marks3);
     private Student student4 = new Student(1, "Prince", subjects, marks4);
 
-    List<Student> studentsList = Arrays.asList(student1, student2, student3, student4);
+    private List<Student> studentsList = Arrays.asList(student1, student2, student3, student4);
+    private List<Student> studentList1 = Arrays.asList(student1, student3, student1, student2, student4, student3);
 
     @Test
     public void checkIfStudentsAreEligibleTest(){
@@ -99,8 +98,10 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
 
     @Test
     public void sortByNameTest(){
-        Student studentMock = mock(Student.class);
-       // when(studentMock.student1.getName())
+        Stream<Student> sortedStream = StudentComparisons.sortByName(studentsList);
+        List<Student> sortedStudentList = Arrays.asList(student1, student2, student4, student3);
+        Stream<Student> sortedStudentStream = sortedStudentList.stream();
+        assertEquals(sortedStream.toArray(), sortedStudentStream.toArray());
     }
 
     @Test
@@ -113,8 +114,21 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
 
         Stream<Student> studentStream = StudentComparisons.passedStudents(studentsList);
         List<Student> passedStudentsList = Arrays.asList(student1, student2, student4);
-
         Stream<Student> passedStudentsStream = passedStudentsList.stream();
-        assertEquals (studentStream,passedStudentsStream);
+
+        assertEquals (studentStream.toArray(),passedStudentsStream.toArray());
+    }
+
+    @Test
+    public void firstStudentTest(){
+        Student student = StudentComparisons.firstStudent(studentList1);
+        assertEquals(student, student1);
+    }
+
+    @Test
+    public void firstStudentTestForEmptyStudentList(){
+        Student student = StudentComparisons.firstStudent(Arrays.asList());
+        Student student5 = new Student();
+        assertEquals(student.getRollNo(), student5.getRollNo());
     }
 }
