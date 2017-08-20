@@ -23,7 +23,7 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         //StudentComparisons studentComparisons = new StudentComparisons();
 
         System.out.println(StudentsScoreCalculation.isEligible(student1));
-        System.out.println(StudentsScoreCalculation.calculatePercentage(student2));
+        System.out.println(StudentsScoreCalculation.calculatePercentage(student1));
 
         List<Student> studentsList = Arrays.asList(student1, student2, student3, student4);
         System.out.println(StudentComparisons.checkIfStudentsAreEligible(studentsList));
@@ -31,12 +31,12 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         Student studentWithHighestPercentage = StudentComparisons.highestPercentage(studentsList);
         studentWithHighestPercentage.displayName();
 
-        System.out.println(StudentComparisons.studdentsCount(studentsList));
+        System.out.println(StudentComparisons.countStudents(studentsList));
 
         StudentComparisons.sortByName(studentsList).forEach(Student::displayName);
 
         System.out.println(".....................");
-        StudentComparisons.percentageGreaterThan30(studentsList).forEach(Student::displayName);
+        StudentComparisons.passedStudents(studentsList).forEach(Student::displayName);
 
 
         System.out.println(StudentsScoreCalculation.calculatePercentageByReduce(student2));

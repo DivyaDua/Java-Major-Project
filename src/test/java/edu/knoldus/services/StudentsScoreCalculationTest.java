@@ -6,15 +6,12 @@ import edu.knoldus.models.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-/*
-import static org.easymock.EasyMock.expect;
-import static org.powermock.api.easymock.PowerMock.mockStatic;
+import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({ Calculator.class })
-*/
 public class StudentsScoreCalculationTest extends Mockito implements StudentsScoreCalculation{
 
     private String[] subjectsArray = {"Java", "Scala", "Play", "Akka"};
@@ -23,14 +20,33 @@ public class StudentsScoreCalculationTest extends Mockito implements StudentsSco
 
     @Test
     public void isEligibleTest(){
-        Calculator calculator = Mockito.mock(Calculator.class);
-        when(calculator.checkIfGreaterThan30(55)).thenReturn(true);
-        when(calculator.checkIfGreaterThan30(75)).thenReturn(true);
-        when(calculator.checkIfGreaterThan30(85)).thenReturn(true);
-        when(calculator.checkIfGreaterThan30(65)).thenReturn(true);
+        PowerMockito.mockStatic(Calculator.class);
+        Mockito.when(Calculator.checkIfGreaterThan30(55)).thenReturn(true);
+        Mockito.when(Calculator.checkIfGreaterThan30(75)).thenReturn(true);
+        Mockito.when(Calculator.checkIfGreaterThan30(85)).thenReturn(true);
+        Mockito.when(Calculator.checkIfGreaterThan30(65)).thenReturn(true);
 
         boolean result = StudentsScoreCalculation.isEligible(student);
-        assertTrue (result);
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void calculatePercentageTest(){
+        double result = StudentsScoreCalculation.calculatePercentage(student);
+        assert(70.0 == result);
+    }
+
+
+    @Test
+    public void calculatePercentageByReduceTest(){
+        double result = StudentsScoreCalculation.calculatePercentageByReduce(student);
+        assert(70.0 == result);
+    }
+
+    @Test
+    public void countSubjectsTest(){
+        long result = StudentsScoreCalculation.countSubjects(student);
+        assertEquals(4, result);
     }
 
 }

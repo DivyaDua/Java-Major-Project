@@ -8,7 +8,6 @@ import java.util.stream.Stream;
 
 public interface StudentComparisons extends StudentsScoreCalculation{
 
-
     static String checkIfStudentsAreEligible(List<Student> studentsList) {
         if (studentsList.stream().allMatch(StudentsScoreCalculation::isEligible)) {
             return "All Students are eligible for advanced level";
@@ -27,7 +26,7 @@ public interface StudentComparisons extends StudentsScoreCalculation{
         return studentsList.stream().min(Comparator.comparing(StudentsScoreCalculation::calculatePercentage)).get();
     }
 
-    static long studdentsCount(List<Student> studentsList){
+    static long countStudents(List<Student> studentsList){
         return studentsList.stream().count();
     }
 
@@ -35,7 +34,7 @@ public interface StudentComparisons extends StudentsScoreCalculation{
         return studentsList.stream().sorted(Comparator.comparing(Student::getName));
     }
 
-    static Stream<Student> percentageGreaterThan30(List<Student> studentsList){
+    static Stream<Student> passedStudents(List<Student> studentsList){
         return studentsList.stream().filter(student -> StudentsScoreCalculation.calculatePercentage(student) > 30);
     }
 
