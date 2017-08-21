@@ -19,32 +19,39 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         Student student3 = new Student(3, "Shruti", subjects, marks3);
         Student student4 = new Student(4, "Prince", subjects, marks4);
 
-        System.out.println(StudentsScoreCalculation.isEligible(student1));
-        System.out.println(StudentsScoreCalculation.calculatePercentage(student1));
+        System.out.println(".........Checking if a student is eligible or not............"+StudentsScoreCalculation.isEligible(student1));
+        System.out.println(".........Calculating student percentage............"+StudentsScoreCalculation.calculatePercentage(student1));
 
         List<Student> studentsList = Arrays.asList(student1, student2, student3, student4);
-        System.out.println(StudentComparisons.checkIfStudentsAreEligible(studentsList));
+        System.out.println(".........Checking if all students are eligible or not............"+StudentComparisons.checkIfStudentsAreEligible(studentsList));
 
         Student studentWithHighestPercentage = StudentComparisons.highestPercentage(studentsList);
+        System.out.println(".........Student with highest percentage............");
         studentWithHighestPercentage.displayName();
 
-        System.out.println(StudentComparisons.countStudents(studentsList));
+        System.out.println(".........Total Number of subjects............"+StudentsScoreCalculation.countSubjects(student1));
 
+        System.out.println(".........Total Number of students............"+StudentComparisons.countStudents(studentsList));
+
+        System.out.println(".........Sorting students by name............");
         StudentComparisons.sortByName(studentsList).forEach(Student::displayName);
 
-        System.out.println(".....................");
+        System.out.println(".........Passed Students............");
         StudentComparisons.passedStudents(studentsList).forEach(Student::displayName);
 
-        System.out.println(StudentsScoreCalculation.calculatePercentageByReduce(student2));
+        System.out.println(".........Calculating student percentage by reduce............"+StudentsScoreCalculation.calculatePercentageByReduce(student2));
+
+        System.out.println(".........Calculating average marks of student............"+StudentsScoreCalculation.averageMarks(student1));
+
+        System.out.println(".........Displaying student names string............"+StudentComparisons.studentsNamesString(studentsList));
+
+        System.out.println(".........Number of students with same name............"+StudentComparisons.studentsWithSameNames(studentsList));
 
         DateAndTimeExample dateAndTimeExample = new DateAndTimeExample();
-        System.out.println(dateAndTimeExample.ageOfPerson());
+        System.out.println(".........Calculating person age............"+dateAndTimeExample.ageOfPerson());
 
-        System.out.println(StudentsScoreCalculation.averageMarks(student1));
-
-        System.out.println(StudentComparisons.studentsNamesString(studentsList));
-
-        System.out.println(StudentComparisons.studentsWithSameNames(studentsList));
     }
+
 }
+
 
