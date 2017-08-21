@@ -10,7 +10,7 @@ public class DateAndTimeExampleTest {
         DateAndTimeExample dateAndTimeExample = new DateAndTimeExample();
         String result = dateAndTimeExample.ageOfPerson();
 
-        assertEquals(result, "Your age is 21 years, 6 months & 26 days!");
+        assertEquals(result, "Your age is 21 years, 6 months!");
     }
 
 }

@@ -4,7 +4,9 @@ import edu.knoldus.models.Student;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public interface StudentComparisons extends StudentsScoreCalculation{
@@ -48,5 +50,20 @@ public interface StudentComparisons extends StudentsScoreCalculation{
             return new Student();
         }
     }
+
+    static Map<String, Long> studentsWithSameNames(List<Student> studentsList){
+         return studentsList.stream().collect(Collectors.groupingBy(Student::getName, Collectors.counting()));
+    }
+
+    static String studentsNamesString(List<Student> studentsList){
+        return studentsList.stream().map(Student::getName).collect(Collectors.joining(","));
+    }
+
+    static List<Integer> evenRollNoStudents(List<Student> studentsList){
+        Map<Boolean, List<Integer>> studentsMap = studentsList.stream().map(Student::getRollNo).collect(Collectors.partitioningBy(n -> n % 2 == 0));
+        return studentsMap.get(true);
+    }
+
+
 
 }

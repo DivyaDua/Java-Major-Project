@@ -9,6 +9,8 @@ import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 public interface StudentsScoreCalculation  extends Calculator{
 
@@ -20,7 +22,8 @@ public interface StudentsScoreCalculation  extends Calculator{
 
     static double calculatePercentage(Student student){
         double[] arrayOfMarks = student.getMarks();
-        DoubleSummaryStatistics statistics = Arrays.stream(arrayOfMarks).mapToObj(Double::new).collect(Collectors.summarizingDouble(a -> a));
+        DoubleStream doubleStream = Arrays.stream(arrayOfMarks);
+        DoubleSummaryStatistics statistics = doubleStream.mapToObj(Double::new).collect(Collectors.summarizingDouble(a -> a));
         return statistics.getSum()/countSubjects(student);
     }
 
@@ -43,7 +46,6 @@ public interface StudentsScoreCalculation  extends Calculator{
     static long countSubjects(Student student){
         String[] arrayOfSubjects = student.getSubject();
         return Arrays.stream(arrayOfSubjects).count();
-
     }
 
 }

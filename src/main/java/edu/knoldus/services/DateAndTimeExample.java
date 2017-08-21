@@ -11,8 +11,7 @@ class DateAndTimeExample {
         Period period = Period.between(birthDate, currentDate);
         int years = period.getYears();
         int months = period.getMonths();
-        int days = period.getDays();
-        return "Your age is " + years + " years, " + months + " months & " + days + " days!";
+        return "Your age is " + years + " years, " + months + " months!";
     }
 
 

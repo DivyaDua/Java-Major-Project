@@ -15,9 +15,9 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         double[] marks4 = {30, 25, 25, 27};
 
         Student student1 = new Student(1, "Divya", subjects, marks1);
-        Student student2 = new Student(1, "Neha", subjects, marks2);
-        Student student3 = new Student(1, "Shruti", subjects, marks3);
-        Student student4 = new Student(1, "Prince", subjects, marks4);
+        Student student2 = new Student(2, "Neha", subjects, marks2);
+        Student student3 = new Student(3, "Shruti", subjects, marks3);
+        Student student4 = new Student(4, "Prince", subjects, marks4);
 
         System.out.println(StudentsScoreCalculation.isEligible(student1));
         System.out.println(StudentsScoreCalculation.calculatePercentage(student1));
@@ -42,6 +42,9 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
 
         System.out.println(StudentsScoreCalculation.averageMarks(student1));
 
+        System.out.println(StudentComparisons.studentsNamesString(studentsList));
+
+        System.out.println(StudentComparisons.studentsWithSameNames(studentsList));
     }
 }
 
