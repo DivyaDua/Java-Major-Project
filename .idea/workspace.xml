@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e7d99a2-18d3-4b0d-9d83-eb2af44613b3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java" afterPath="$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java" afterPath="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsMain.java" afterPath="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentComparisonsTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentComparisonsTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="StudentsMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StudentsMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="31" column="122" lean-forward="false" selection-start-line="31" selection-start-column="122" selection-end-line="31" selection-end-column="122" />
+            <state relative-caret-position="1372">
+              <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,14 +31,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentComparisons.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StudentComparisons.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-174">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            <state relative-caret-position="476">
+              <caret line="40" column="135" lean-forward="false" selection-start-line="40" selection-start-column="135" selection-end-line="40" selection-end-column="135" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentComparisonsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentComparisonsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="753">
+              <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-205">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,17 +90,17 @@
         <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/models/StudentTestTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/models/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/models/StudentTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentsScoreCalculationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/models/Calculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/services/PrimitiveStreamsExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsScoreCalculation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentComparisonsTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/services/DateAndTimeExampleTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/services/DateAndTimeExample.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentComparisonsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsMain.java" />
       </list>
     </option>
@@ -242,7 +266,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.StudentsMain">
-    <configuration name="DateAndTimeExampleTest.ageOfPersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentComparisonsTest.highestPercentageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="edu.knoldus.services.*" />
@@ -253,8 +277,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="edu.knoldus.services" />
-      <option name="MAIN_CLASS_NAME" value="edu.knoldus.services.DateAndTimeExampleTest" />
-      <option name="METHOD_NAME" value="ageOfPersonTest" />
+      <option name="MAIN_CLASS_NAME" value="edu.knoldus.services.StudentComparisonsTest" />
+      <option name="METHOD_NAME" value="highestPercentageTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -267,7 +291,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="StudentComparisonsTest.firstStudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentComparisonsTest.lowestPercentageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="edu.knoldus.services.*" />
@@ -279,7 +303,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="edu.knoldus.services" />
       <option name="MAIN_CLASS_NAME" value="edu.knoldus.services.StudentComparisonsTest" />
-      <option name="METHOD_NAME" value="firstStudentTest" />
+      <option name="METHOD_NAME" value="lowestPercentageTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -292,7 +316,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="StudentComparisonsTest.firstStudentTestForEmptyStudentList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentComparisonsTest.passedStudentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="edu.knoldus.services.*" />
@@ -304,7 +328,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="edu.knoldus.services" />
       <option name="MAIN_CLASS_NAME" value="edu.knoldus.services.StudentComparisonsTest" />
-      <option name="METHOD_NAME" value="firstStudentTestForEmptyStudentList" />
+      <option name="METHOD_NAME" value="passedStudentsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -317,7 +341,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="StudentComparisonsTest.studentsWithSameNamesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentComparisonsTest.sortByNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="edu.knoldus.services.*" />
@@ -329,7 +353,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="edu.knoldus.services" />
       <option name="MAIN_CLASS_NAME" value="edu.knoldus.services.StudentComparisonsTest" />
-      <option name="METHOD_NAME" value="studentsWithSameNamesTest" />
+      <option name="METHOD_NAME" value="sortByNameTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -443,19 +467,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.firstStudentTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.firstStudentTestForEmptyStudentList" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.studentsWithSameNamesTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DateAndTimeExampleTest.ageOfPersonTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.StudentsMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.StudentsMain" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.highestPercentageTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.lowestPercentageTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.sortByNameTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.passedStudentsTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.StudentsMain" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DateAndTimeExampleTest.ageOfPersonTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.studentsWithSameNamesTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.firstStudentTestForEmptyStudentList" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.firstStudentTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.passedStudentsTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.sortByNameTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.lowestPercentageTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StudentComparisonsTest.highestPercentageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -484,25 +508,25 @@
     <history-entry file="DateAndTimeExampleTest_ageOfPersonTest - 2017.08.21 at 11h 10m 05s.xml">
       <configuration name="DateAndTimeExampleTest.ageOfPersonTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentComparisonsTest_countStudentsTest - 2017.08.21 at 11h 03m 34s.xml">
-      <configuration name="StudentComparisonsTest.countStudentsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StudentComparisonsTest_firstStudentTest - 2017.08.21 at 11h 04m 33s.xml">
       <configuration name="StudentComparisonsTest.firstStudentTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StudentComparisonsTest_firstStudentTestForEmptyStudentList - 2017.08.21 at 11h 04m 42s.xml">
       <configuration name="StudentComparisonsTest.firstStudentTestForEmptyStudentList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentComparisonsTest_highestPercentageTest - 2017.08.21 at 11h 02m 50s.xml">
+    <history-entry file="StudentComparisonsTest_highestPercentageTest - 2017.08.21 at 14h 38m 46s.xml">
       <configuration name="StudentComparisonsTest.highestPercentageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentComparisonsTest_lowestPercentageTest - 2017.08.21 at 11h 03m 22s.xml">
+    <history-entry file="StudentComparisonsTest_lowestPercentageTest - 2017.08.21 at 14h 38m 53s.xml">
       <configuration name="StudentComparisonsTest.lowestPercentageTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StudentComparisonsTest_passedStudentsTest - 2017.08.21 at 11h 04m 23s.xml">
       <configuration name="StudentComparisonsTest.passedStudentsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentComparisonsTest_sortByNameTest - 2017.08.21 at 11h 03m 52s.xml">
+    <history-entry file="StudentComparisonsTest_passedStudentsTest - 2017.08.21 at 14h 51m 14s.xml">
+      <configuration name="StudentComparisonsTest.passedStudentsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StudentComparisonsTest_sortByNameTest - 2017.08.21 at 14h 51m 05s.xml">
       <configuration name="StudentComparisonsTest.sortByNameTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StudentComparisonsTest_studentsWithSameNamesTest - 2017.08.21 at 11h 07m 45s.xml">
@@ -574,7 +598,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -650,7 +674,7 @@
         <state relative-caret-position="2604">
           <caret line="103" column="45" lean-forward="false" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -790,18 +814,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/knoldus/models/StudentTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -819,14 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -860,7 +871,7 @@
         <state relative-caret-position="336">
           <caret line="12" column="61" lean-forward="false" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,10 +884,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsMain.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="31" column="122" lean-forward="false" selection-start-line="31" selection-start-column="122" selection-end-line="31" selection-end-column="122" />
+        <state relative-caret-position="479">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/models/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="135" lean-forward="false" selection-start-line="40" selection-start-column="135" selection-end-line="40" selection-end-column="135" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -885,18 +912,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/knoldus/services/StudentComparisonsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3864">
-          <caret line="162" column="39" lean-forward="false" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="753">
+          <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentComparisons.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/knoldus/services/StudentsMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-174">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="1372">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -3,10 +3,14 @@ package edu.knoldus.services;
 import edu.knoldus.models.Student;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.logging.Logger;
 
 public class StudentsMain implements StudentsScoreCalculation, StudentComparisons{
 
     public static void main(String...args){
+
+        Logger logger = Logger.getLogger(StudentsMain.class.getName());
 
         String[] subjects = {"Java", "Scala", "Play", "Akka"};
         double[] marks1 = {55, 75, 88, 62};
@@ -19,36 +23,46 @@ public class StudentsMain implements StudentsScoreCalculation, StudentComparison
         Student student3 = new Student(3, "Shruti", subjects, marks3);
         Student student4 = new Student(4, "Prince", subjects, marks4);
 
-        System.out.println(".........Checking if a student is eligible or not............"+StudentsScoreCalculation.isEligible(student1));
-        System.out.println(".........Calculating student percentage............"+StudentsScoreCalculation.calculatePercentage(student1));
+        boolean isEligible = StudentsScoreCalculation.isEligible(student1);
+        logger.info(".........Checking if a student is eligible or not............"+isEligible);
+
+        double percentage = StudentsScoreCalculation.calculatePercentage(student1);
+        logger.info(".........Calculating student percentage............"+percentage);
 
         List<Student> studentsList = Arrays.asList(student1, student2, student3, student4);
-        System.out.println(".........Checking if all students are eligible or not............"+StudentComparisons.checkIfStudentsAreEligible(studentsList));
+        String result = StudentComparisons.checkIfStudentsAreEligible(studentsList);
+        logger.info(".........Checking if all students are eligible or not............"+result);
 
-        Student studentWithHighestPercentage = StudentComparisons.highestPercentage(studentsList);
-        System.out.println(".........Student with highest percentage............");
-        studentWithHighestPercentage.displayName();
+        String studentWithHighestPercentage = StudentComparisons.highestPercentage(studentsList);
+        logger.info(".........Student with highest percentage............" + studentWithHighestPercentage);
 
-        System.out.println(".........Total Number of subjects............"+StudentsScoreCalculation.countSubjects(student1));
+        long countOfSubjects = StudentsScoreCalculation.countSubjects(student1);
+        logger.info(".........Total Number of subjects............"+countOfSubjects);
 
-        System.out.println(".........Total Number of students............"+StudentComparisons.countStudents(studentsList));
+        long countOfStudents = StudentComparisons.countStudents(studentsList);
+        logger.info(".........Total Number of students............"+countOfStudents);
 
-        System.out.println(".........Sorting students by name............");
-        StudentComparisons.sortByName(studentsList).forEach(Student::displayName);
+        Object[] sortedNamesArray = StudentComparisons.sortByName(studentsList).toArray();
+        logger.info(".........Sorting students by name............" + sortedNamesArray);
 
-        System.out.println(".........Passed Students............");
-        StudentComparisons.passedStudents(studentsList).forEach(Student::displayName);
+        Object[] passedStudentArray = StudentComparisons.passedStudents(studentsList).toArray();
+        logger.info(".........Passed Students............" + passedStudentArray);
+        
+        double percentageByReduce = StudentsScoreCalculation.calculatePercentageByReduce(student2);
+        logger.info(".........Calculating student percentage by reduce............"+ percentageByReduce);
 
-        System.out.println(".........Calculating student percentage by reduce............"+StudentsScoreCalculation.calculatePercentageByReduce(student2));
+        double average =  StudentsScoreCalculation.averageMarks(student1);
+        logger.info(".........Calculating average marks of student............"+average);
 
-        System.out.println(".........Calculating average marks of student............"+StudentsScoreCalculation.averageMarks(student1));
+        String namesString = StudentComparisons.studentsNamesString(studentsList);
+        logger.info(".........Displaying student names string............"+ namesString);
 
-        System.out.println(".........Displaying student names string............"+StudentComparisons.studentsNamesString(studentsList));
-
-        System.out.println(".........Number of students with same name............"+StudentComparisons.studentsWithSameNames(studentsList));
+        Map<String, Long> stringLongMap = StudentComparisons.studentsWithSameNames(studentsList);
+        logger.info(".........Number of students with same name............"+stringLongMap);
 
         DateAndTimeExample dateAndTimeExample = new DateAndTimeExample();
-        System.out.println(".........Calculating person age............"+dateAndTimeExample.ageOfPerson());
+        String age = dateAndTimeExample.ageOfPerson();
+        logger.info(".........Calculating person age............"+ age);
 
     }
 

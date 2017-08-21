@@ -36,7 +36,5 @@ public class Student {
         return this.marks;
     }
 
-    public void displayName(){
-        System.out.println(this.name);
-    }
 }
+

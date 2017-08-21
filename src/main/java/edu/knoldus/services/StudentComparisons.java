@@ -21,24 +21,24 @@ public interface StudentComparisons extends StudentsScoreCalculation{
         }
     }
 
-    static Student highestPercentage(List<Student> studentsList){
-        return studentsList.stream().max(Comparator.comparing(StudentsScoreCalculation::calculatePercentage)).get();
+    static String highestPercentage(List<Student> studentsList){
+        return studentsList.stream().max(Comparator.comparing(StudentsScoreCalculation::calculatePercentage)).map(Student::getName).get();
     }
 
-    static Student lowestPercentage(List<Student> studentsList){
-        return studentsList.stream().min(Comparator.comparing(StudentsScoreCalculation::calculatePercentage)).get();
+    static String lowestPercentage(List<Student> studentsList){
+        return studentsList.stream().min(Comparator.comparing(StudentsScoreCalculation::calculatePercentage)).map(Student::getName).get();
     }
 
     static long countStudents(List<Student> studentsList){
         return studentsList.stream().count();
     }
 
-    static Stream<Student> sortByName(List<Student> studentsList){
-        return studentsList.stream().sorted(Comparator.comparing(Student::getName));
+    static Stream<String> sortByName(List<Student> studentsList){
+        return studentsList.stream().sorted(Comparator.comparing(Student::getName)).map(Student::getName);
     }
 
-    static Stream<Student> passedStudents(List<Student> studentsList){
-        return studentsList.stream().filter(student -> StudentsScoreCalculation.calculatePercentage(student) > 30);
+    static Stream<String> passedStudents(List<Student> studentsList){
+        return studentsList.stream().filter(student -> StudentsScoreCalculation.calculatePercentage(student) > 30).map(Student::getName);
     }
 
     static Student firstStudent(List<Student> studentsList){

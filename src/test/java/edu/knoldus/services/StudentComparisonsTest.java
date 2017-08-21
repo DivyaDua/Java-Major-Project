@@ -82,8 +82,8 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
         PowerMockito.when(StudentsScoreCalculation.calculatePercentage(student4)).thenReturn(67.0);
         PowerMockito.when(StudentsScoreCalculation.calculatePercentage(student5)).thenReturn(60.0);
 
-        Student result = StudentComparisons.highestPercentage(studentsList);
-        assert (result == student2);
+        String result = StudentComparisons.highestPercentage(studentsList);
+        assert (result.equals("Neha"));
     }
 
     @Test
@@ -95,8 +95,8 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
         PowerMockito.when(StudentsScoreCalculation.calculatePercentage(student4)).thenReturn(67.0);
         PowerMockito.when(StudentsScoreCalculation.calculatePercentage(student5)).thenReturn(60.0);
 
-        Student result = StudentComparisons.lowestPercentage(studentsList);
-        assert (result == student3);
+        String result = StudentComparisons.lowestPercentage(studentsList);
+        assert (result.equals("Shruti"));
     }
 
     @Test
@@ -107,9 +107,9 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
 
     @Test
     public void sortByNameTest(){
-        Stream<Student> sortedStream = StudentComparisons.sortByName(studentsList);
-        List<Student> sortedStudentList = Arrays.asList(student1, student2, student4, student5, student3);
-        Stream<Student> sortedStudentStream = sortedStudentList.stream();
+        Stream<String> sortedStream = StudentComparisons.sortByName(studentsList);
+        List<String> sortedStudentList = Arrays.asList("Divya", "Neha", "Prince", "Prince", "Shruti");
+        Stream<String> sortedStudentStream = sortedStudentList.stream();
         assertEquals(sortedStream.toArray(), sortedStudentStream.toArray());
     }
 
@@ -122,9 +122,9 @@ public class StudentComparisonsTest extends Mockito implements StudentComparison
         PowerMockito.when(StudentsScoreCalculation.calculatePercentage(student4)).thenReturn(67.0);
         PowerMockito.when(StudentsScoreCalculation.calculatePercentage(student5)).thenReturn(28.0);
 
-        Stream<Student> studentStream = StudentComparisons.passedStudents(studentsList);
-        List<Student> passedStudentsList = Arrays.asList(student1, student2, student4);
-        Stream<Student> passedStudentsStream = passedStudentsList.stream();
+        Stream<String> studentStream = StudentComparisons.passedStudents(studentsList);
+        List<String> passedStudentsList = Arrays.asList("Divya", "Neha", "Prince");
+        Stream<String> passedStudentsStream = passedStudentsList.stream();
 
         assertEquals (studentStream.toArray(),passedStudentsStream.toArray());
     }
